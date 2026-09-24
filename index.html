@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claudio Báez | Entrenador Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C',
+                        },
+                        darkBg: '#0A0A0A',
+                        cardBg: '#141414',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased selection:bg-gold selection:text-black">
+
+    <!-- HEADER / BANNER SUPERIOR -->
+    <header class="bg-black border-b border-gold/20 py-6 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- LOGO / ICONO -->
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 border-2 border-gold mb-3 text-gold shadow-lg shadow-gold/20">
+                <i class="fa-solid fa-dumbbell text-2xl"></i>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-black tracking-wider uppercase text-white mb-1">
+                CLAUDIO BÁEZ
+            </h1>
+            <p class="text-xs md:text-sm tracking-widest text-gold font-semibold uppercase mb-4">
+                Entrenador Personal • Mar del Plata, Argentina
+            </p>
+            <h2 class="text-xl md:text-3xl font-extrabold uppercase text-gold/90 tracking-wide">
+                PLANES DE ENTRENAMIENTO
+            </h2>
+            <p class="text-xs md:text-sm text-gray-400 mt-1 uppercase tracking-wider">
+                Rutinas Personalizadas | Nivel Avanzado
+            </p>
+        </div>
+    </header>
+
+    <!-- OBJETIVOS ICONOS -->
+    <section class="bg-[#111] py-5 border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="flex flex-col items-center p-3 bg-cardBg rounded-xl border border-gold/10 hover:border-gold/40 transition">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center mb-2">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <span class="text-xs font-bold uppercase text-gray-200">Ganá Masa Muscular</span>
+            </div>
+            <div class="flex flex-col items-center p-3 bg-cardBg rounded-xl border border-gold/10 hover:border-gold/40 transition">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center mb-2">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <span class="text-xs font-bold uppercase text-gray-200">Aumentá tu Fuerza</span>
+            </div>
+            <div class="flex flex-col items-center p-3 bg-cardBg rounded-xl border border-gold/10 hover:border-gold/40 transition">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center mb-2">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <span class="text-xs font-bold uppercase text-gray-200">Reducí tu % de Grasa</span>
+            </div>
+            <div class="flex flex-col items-center p-3 bg-cardBg rounded-xl border border-gold/10 hover:border-gold/40 transition">
+                <div class="w-10 h-10 rounded-full bg-gold/10 text-gold flex items-center justify-center mb-2">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="text-xs font-bold uppercase text-gray-200">Mejorá tu Rendimiento</span>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-xs text-gold uppercase tracking-widest font-bold">Tu objetivo, mi enfoque</p>
+        </div>
+    </section>
+
+    <!-- TEST DE DIAGNÓSTICO INTELIGENTE -->
+    <section class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-gradient-to-br from-neutral-900 to-cardBg border-2 border-gold/40 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-5 text-gold pointer-events-none">
+                <i class="fa-solid fa-clipboard-check text-9xl"></i>
+            </div>
+            <div class="text-center mb-6">
+                <span class="bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Asistente Virtual</span>
+                <h3 class="text-xl md:text-2xl font-black text-white mt-2">¿NO SABÉS QUÉ RUTINA ELEGIR?</h3>
+                <p class="text-xs md:text-sm text-gray-400 mt-1">Completa tus datos en 1 minuto y te recomendamos el plan perfecto para tu meta.</p>
+            </div>
+
+            <form id="quizForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Género</label>
+                    <select id="qGenero" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Edad</label>
+                    <input type="number" id="qEdad" placeholder="Ej: 25" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Altura (cm)</label>
+                    <input type="number" id="qAltura" placeholder="Ej: 175" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Peso (kg)</label>
+                    <input type="number" id="qPeso" placeholder="Ej: 75" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">¿Realizás actividad física?</label>
+                    <select id="qActividad" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                        <option value="si">Sí, entreno actualmente</option>
+                        <option value="no">No / Hace mucho que no</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Experiencia entrenando</label>
+                    <select id="qExperiencia" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                        <option value="principiante">Menos de 6 meses (Principiante)</option>
+                        <option value="intermedio">6 meses a 2 años (Intermedio)</option>
+                        <option value="avanzado">Más de 2 años (Avanzado)</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 text-center mt-2">
+                    <button type="button" onclick="recomendarPlan()" class="bg-gold hover:bg-gold-light text-black font-extrabold uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-sm flex items-center justify-center mx-auto gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Ver mi rutina recomendada
+                    </button>
+                </div>
+            </form>
+
+            <!-- Resultado Recomendación -->
+            <div id="resultadoRecomendacion" class="hidden mt-6 p-5 bg-neutral-900 border border-gold rounded-xl text-center">
+                <span class="text-xs uppercase tracking-widest text-gold font-bold">¡Plan ideal para vos!</span>
+                <h4 id="recTitulo" class="text-xl font-black text-white mt-1">Rutina 1: Hipertrofia</h4>
+                <p id="recDesc" class="text-xs text-gray-300 mt-2 max-w-lg mx-auto">Basado en tus datos, este plan maximizará tu crecimiento muscular y desarrollo de fuerza.</p>
+                <div class="mt-4 flex flex-wrap justify-center gap-3">
+                    <button id="btnVerRecomendado" class="bg-gold text-black font-bold px-5 py-2 rounded-lg text-xs uppercase hover:bg-gold-light transition">Ver detalles y comprar</button>
+                    <button onclick="cerrarRecomendacion()" class="bg-neutral-800 text-gray-300 px-4 py-2 rounded-lg text-xs uppercase hover:bg-neutral-700 transition">Ver todo el catálogo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOGO DE RUTINAS -->
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h3 class="text-lg md:text-xl font-bold uppercase text-gray-300 tracking-wider">Catálogo de Programas</h3>
+            <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
+            <p class="text-xs text-gray-400 mt-2">Hacé clic en cualquier tarjeta para ver el contenido completo y adquirir tu plan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- RUTINA 1 -->
+            <div onclick="abrirModal(1)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+                <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
+                    Rutina 1
+                </div>
+                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIPERTROFIA</h4>
+                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Máximo Crecimiento Muscular</p>
+                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                    Rutina enfocada en estimular la hipertrofia muscular con combinación de ejercicios compuestos, aislamiento y técnicas de intensidad.
+                </p>
+                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
+                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 5-6 días/sem</div>
+                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 60-75 min</div>
+                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-lg font-black text-white">$40.000</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- RUTINA 2 -->
+            <div onclick="abrirModal(2)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+                <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
+                    Rutina 2
+                </div>
+                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">FUERZA</h4>
+                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Potenciá tu Rendimiento</p>
+                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                    Enfocada en aumentar tu fuerza máxima y mejorar la técnica en los movimientos principales. Ideal para quienes buscan progresar en cargas.
+                </p>
+                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
+                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 4-5 días/sem</div>
+                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 60-75 min</div>
+                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-lg font-black text-white">$40.000</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- RUTINA 3 -->
+            <div onclick="abrirModal(3)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+                <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
+                    Rutina 3
+                </div>
+                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIIT</h4>
+                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Quemá Calorías, Ganá Resistencia</p>
+                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                    Rutina de alta intensidad con intervalos cortos y descansos activos. Ideal para mejorar capacidad cardiovascular y acelerar el metabolismo.
+                </p>
+                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
+                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 4-6 días/sem</div>
+                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 30-45 min</div>
+                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-lg font-black text-white">$35.000</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- RUTINA 4 -->
+            <div onclick="abrirModal(4)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+                <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
+                    Rutina 4
+                </div>
+                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">METABÓLICA</h4>
+                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Fuerza + Resistencia + Quema</p>
+                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                    Combinación de trabajo de fuerza, intervalos y circuitos metabólicos para mejorar resistencia, mantener masa muscular y oxidar grasa.
+                </p>
+                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
+                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 5-6 días/sem</div>
+                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 45-70 min</div>
+                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-lg font-black text-white">$40.000</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA -->
+        <div class="mt-8 bg-gradient-to-r from-cardBg via-neutral-900 to-cardBg border-2 border-gold rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-widest">
+                Exclusivo 1v1
+            </div>
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/10 text-gold mb-3 border border-gold/40">
+                <i class="fa-solid fa-video text-xl"></i>
+            </div>
+            <h4 class="text-xl md:text-2xl font-black uppercase text-white mb-2">¿Buscas algo 100% a tu medida?</h4>
+            <p class="text-xs md:text-sm text-gray-300 max-w-xl mx-auto mb-6 leading-relaxed">
+                Coordiná una videollamada diagnóstica directa con el entrenador Claudio Báez. Analizamos tus objetivos, lesiones y disponibilidad para diseñar un plan exclusivo para vos.
+            </p>
+            <button onclick="abrirModalPersonalizado()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-xs inline-flex items-center gap-2">
+                <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($55.000)
+            </button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-gold/20 py-8 px-4 text-center mt-12">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <p class="text-xs font-bold uppercase text-gold tracking-widest">Asesoría Online y Seguimiento</p>
+            <div class="flex justify-center items-center gap-2 text-sm text-gray-300">
+                <i class="fa-brands fa-instagram text-gold"></i>
+                <span class="font-bold tracking-wide">@Claudio97fit</span>
+                <span class="text-gray-600">|</span>
+                <span class="text-xs text-gray-400">Escribime por DM</span>
+            </div>
+            <div class="pt-4 border-t border-neutral-900">
+                <p class="text-sm font-black italic uppercase text-white tracking-widest">Disciplina hoy, resultados mañana</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLE Y COMPRA -->
+    <div id="modalPlan" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-cardBg border border-gold rounded-2xl max-w-lg w-full p-6 relative shadow-2xl my-8">
+            <button onclick="cerrarModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center border border-neutral-700">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- CONTENIDO PASO 1: DETALLE -->
+            <div id="modalPaso1">
+                <span id="modalTag" class="bg-gold/20 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">Rutina</span>
+                <h3 id="modalTitulo" class="text-2xl font-black uppercase text-white mt-2 mb-1">Nombre del Plan</h3>
+                <p id="modalSubtitulo" class="text-xs text-gold font-semibold uppercase mb-4">Subtítulo descriptivo</p>
+                
+                <p id="modalDescripcion" class="text-xs text-gray-300 mb-6 leading-relaxed">
+                    Descripción detallada del plan de entrenamiento.
+                </p>
+
+                <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-800 mb-6 space-y-2 text-xs text-gray-300">
+                    <div class="flex justify-between font-bold text-white border-b border-neutral-800 pb-2">
+                        <span>¿Qué incluye el PDF?</span>
+                        <span class="text-gold">Acceso Inmediato</span>
+                    </div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Tabla de ejercicios detallada por día</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Series, repeticiones y tiempos de descanso</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Guía técnica y de alimentación orientativa</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Envío automático a tu Gmail tras abonar</div>
+                </div>
+
+                <div class="flex items-center justify-between mb-6 pt-2 border-t border-neutral-800">
+                    <div>
+                        <span class="text-[10px] text-gray-400 uppercase block">Valor Total</span>
+                        <span id="modalPrecio" class="text-2xl font-black text-white">$40.000</span>
+                    </div>
+                    <button onclick="irAlCheckout()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-6 py-3 rounded-xl shadow-lg transition tracking-wider text-xs flex items-center gap-2">
+                        Comprar Plan <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CONTENIDO PASO 2: FORMULARIO Y PAGO -->
+            <div id="modalPaso2" class="hidden">
+                <button onclick="volverAlPaso1()" class="text-xs text-gold flex items-center gap-1 mb-4 hover:underline">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a los detalles
+                </button>
+                
+                <h3 class="text-lg font-black uppercase text-white mb-1">Datos para tu Plan</h3>
+                <p class="text-xs text-gray-400 mb-4">Completá tus datos para personalizar el envío y tu ficha técnica.</p>
+
+                <form id="checkoutForm" onsubmit="procesarPago(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-gray-300 mb-1">Correo electrónico (para recibir el PDF)</label>
+                        <input type="email" id="emailUser" placeholder="tucorreo@gmail.com" required class="w-full bg-black border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:border-gold outline-none">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-gray-300 mb-1">Nombre y Apellido</label>
+                            <input type="text" id="nombreUser" placeholder="Tu nombre" required class="w-full bg-black border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:border-gold outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-gray-300 mb-1">WhatsApp</label>
+                            <input type="tel" id="telUser" placeholder="Ej: 223..." required class="w-full bg-black border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:border-gold outline-none">
+                        </div>
+                    </div>
+
+                    <!-- DATOS FISICOS PREMIUM -->
+                    <div class="bg-neutral-900 p-3 rounded-xl border border-neutral-800 space-y-2 mt-2">
+                        <span class="text-[10px] font-bold uppercase text-gold tracking-widest block">Ficha Técnica Personalizada</span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div>
+                                <label class="block text-[10px] text-gray-400">Edad</label>
+                                <input type="number" id="edadUser" required class="w-full bg-black border border-neutral-700 rounded p-2 text-xs text-white">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-gray-400">Peso (kg)</label>
+                                <input type="number" id="pesoUser" required class="w-full bg-black border border-neutral-700 rounded p-2 text-xs text-white">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-gray-400">Altura (cm)</label>
+                                <input type="number" id="alturaUser" required class="w-full bg-black border border-neutral-700 rounded p-2 text-xs text-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] text-gray-400 mb-1">Lesiones o molestias previas</label>
+                            <input type="text" id="lesionesUser" placeholder="Ej: Ninguna / Dolor lumbar leve" class="w-full bg-black border border-neutral-700 rounded p-2 text-xs text-white">
+                        </div>
+                    </div>
+
+                    <!-- MERCADO PAGO INTEGRACION -->
+                    <div class="pt-2">
+                        <div class="bg-[#009EE3]/10 border border-[#009EE3]/40 rounded-xl p-3 flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-[#009EE3] text-white flex items-center justify-center font-black text-xs">MP</div>
+                                <div>
+                                    <span class="text-xs font-bold text-white block">Mercado Pago</span>
+                                    <span class="text-[10px] text-gray-400">Tarjetas, Transferencia o Efectivo</span>
+                                </div>
+                            </div>
+                            <span id="precioCheckout" class="text-sm font-black text-white">$40.000</span>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#009EE3] hover:bg-[#0082be] text-white font-extrabold uppercase py-3 rounded-xl shadow-lg transition tracking-wider text-xs flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-lock"></i> Pagar con Mercado Pago
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- CONTENIDO PASO 3: SIMULACION DE GMAIL AUTOMATICO -->
+            <div id="modalPaso3" class="hidden text-center py-4">
+                <div class="w-16 h-16 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center mx-auto mb-4 border border-green-500/40 text-2xl">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="text-xl font-black uppercase text-white mb-1">¡Pago Aprobado con Éxito!</h3>
+                <p class="text-xs text-gray-300 mb-6">El sistema automatizado acaba de procesar tu compra y enviarle tu rutina.</p>
+
+                <!-- SIMULACION BANDEJA GMAIL -->
+                <div class="bg-neutral-900 border border-neutral-700 rounded-xl p-4 text-left mb-6 shadow-inner">
+                    <div class="flex items-center justify-between border-b border-neutral-800 pb-2 mb-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-red-400 text-sm"></i>
+                            <span class="text-xs font-bold text-white">Simulación de Bandeja de Entrada (Gmail)</span>
+                        </div>
+                        <span class="text-[10px] text-green-400 bg-green-500/10 px-2 py-0.5 rounded">Enviado hace 1s</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mb-1"><strong class="text-white">De:</strong> Claudio Báez Training &lt;automatizaciones@claudiobaez.fit&gt;</p>
+                    <p class="text-[11px] text-gray-400 mb-3"><strong class="text-white">Para:</strong> <span id="correoDestinoSpan" class="text-gold">tucorreo@gmail.com</span></p>
+                    
+                    <div class="bg-black/60 p-3 rounded-lg border border-neutral-800 text-xs space-y-2">
+                        <p class="text-white font-bold">¡Hola <span id="nombreDestinoSpan">Atleta</span>! Tu plan ya está listo.</p>
+                        <p class="text-gray-300 text-[11px]">Adjuntamos tu rutina personalizada en PDF junto con las recomendaciones de alimentación según tu ficha técnica.</p>
+                        <a href="#" onclick="alert('¡Descarga simulada del PDF de entrenamiento de Claudio Báez iniciada con éxito!'); return false;" class="inline-flex items-center gap-2 bg-gold text-black font-extrabold px-4 py-2 rounded-lg text-xs uppercase hover:bg-gold-light transition mt-2">
+                            <i class="fa-solid fa-download"></i> Descargar Rutina en PDF (.PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <button onclick="cerrarModal()" class="bg-neutral-800 hover:bg-neutral-700 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition">
+                    Cerrar ventana
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DE FUNCIONAMIENTO -->
+    <script>
+        const planes = {
+            1: {
+                titulo: "RUTINA 1: HIPERTROFIA",
+                subtitulo: "Máximo Crecimiento Muscular",
+                precio: "$40.000",
+                numPrecio: 40000,
+                tag: "Rutina 1",
+                desc: "Rutina enfocada en estimular la hipertrofia muscular con combinación de ejercicios compuestos, aislamiento y técnicas de intensidad avanzadas."
+            },
+            2: {
+                titulo: "RUTINA 2: FUERZA",
+                subtitulo: "Potenciá tu Rendimiento",
+                precio: "$40.000",
+                numPrecio: 40000,
+                tag: "Rutina 2",
+                desc: "Enfocada en aumentar tu fuerza máxima y mejorar la técnica en los movimientos principales. Ideal para quienes buscan progresar en cargas."
+            },
+            3: {
+                titulo: "RUTINA 3: HIIT",
+                subtitulo: "Quemá Calorías, Ganá Resistencia",
+                precio: "$35.000",
+                numPrecio: 35000,
+                tag: "Rutina 3",
+                desc: "Rutina de alta intensidad con intervalos cortos y descansos activos. Ideal para mejorar capacidad cardiovascular y acelerar el metabolismo."
+            },
+            4: {
+                titulo: "RUTINA 4: METABÓLICA",
+                subtitulo: "Fuerza + Resistencia + Quema",
+                precio: "$40.000",
+                numPrecio: 40000,
+                tag: "Rutina 4",
+                desc: "Combinación de trabajo de fuerza, intervalos y circuitos metabólicos para mejorar resistencia, mantener masa muscular y oxidar grasa."
+            },
+            personalizado: {
+                titulo: "PLAN 100% PERSONALIZADO + VIDEOLLAMADA",
+                subtitulo: "Asesoría 1v1 con Claudio Báez",
+                precio: "$55.000",
+                numPrecio: 55000,
+                tag: "Exclusivo 1v1",
+                desc: "Incluye una videollamada diagnóstica directa con Claudio Báez para analizar tus objetivos, historial y diseñar un programa a tu completa medida."
+            }
+        };
+
+        let planActual = 1;
+
+        function abrirModal(id) {
+            planActual = id;
+            const p = planes[id];
+            document.getElementById('modalTag').innerText = p.tag;
+            document.getElementById('modalTitulo').innerText = p.titulo;
+            document.getElementById('modalSubtitulo').innerText = p.subtitulo;
+            document.getElementById('modalDescripcion').innerText = p.desc;
+            document.getElementById('modalPrecio').innerText = p.precio;
+            document.getElementById('precioCheckout').innerText = p.precio;
+
+            document.getElementById('modalPaso1').classList.remove('hidden');
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso3').classList.add('hidden');
+            document.getElementById('modalPlan').classList.remove('hidden');
+        }
+
+        function abrirModalPersonalizado() {
+            planActual = 'personalizado';
+            const p = planes['personalizado'];
+            document.getElementById('modalTag').innerText = p.tag;
+            document.getElementById('modalTitulo').innerText = p.titulo;
+            document.getElementById('modalSubtitulo').innerText = p.subtitulo;
+            document.getElementById('modalDescripcion').innerText = p.desc;
+            document.getElementById('modalPrecio').innerText = p.precio;
+            document.getElementById('precioCheckout').innerText = p.precio;
+
+            document.getElementById('modalPaso1').classList.remove('hidden');
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso3').classList.add('hidden');
+            document.getElementById('modalPlan').classList.remove('hidden');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalPlan').classList.add('hidden');
+        }
+
+        function irAlCheckout() {
+            document.getElementById('modalPaso1').classList.add('hidden');
+            document.getElementById('modalPaso2').classList.remove('hidden');
+        }
+
+        function volverAlPaso1() {
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso1').classList.remove('hidden');
+        }
+
+        function procesarPago(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailUser').value;
+            const nombre = document.getElementById('nombreUser').value;
+
+            document.getElementById('correoDestinoSpan').innerText = email;
+            document.getElementById('nombreDestinoSpan').innerText = nombre;
+
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso3').classList.remove('hidden');
+        }
+
+        function recomendarPlan() {
+            const edad = parseInt(document.getElementById('qEdad').value);
+            const peso = parseFloat(document.getElementById('qPeso').value);
+            const altura = parseFloat(document.getElementById('qAltura').value);
+            const actividad = document.getElementById('qActividad').value;
+            const experiencia = document.getElementById('qExperiencia').value;
+
+            if(!edad || !peso || !altura) {
+                alert('Por favor, completa los datos de edad, peso y altura para recibir la recomendación.');
+                return;
+            }
+
+            let idRecomendado = 1;
+            let tituloRec = "Rutina 1: Hipertrofia";
+            let descRec = "Ideal para tu perfil para maximizar ganancia muscular y estética.";
+
+            if (experiencia === 'avanzado' && actividad === 'si') {
+                idRecomendado = 2;
+                tituloRec = "Rutina 2: Fuerza Avanzada";
+                descRec = "Perfecta para romper estancamientos y potenciar tus marcas en cargas pesadas.";
+            } else if (peso > 80 && actividad === 'no') {
+                idRecomendado = 4;
+                tituloRec = "Rutina 4: Metabólica / Quema";
+                descRec = "Combinación excelente para oxidación de grasa y acondicionamiento general.";
+            } else if (experiencia === 'principiante') {
+                idRecomendado = 3;
+                tituloRec = "Rutina 3: HIIT & Resistencia";
+                descRec = "Excelente para activar el metabolismo, ganar resistencia y quemar calorías.";
+            }
+
+            document.getElementById('recTitulo').innerText = tituloRec;
+            document.getElementById('recDesc').innerText = descRec;
+            document.getElementById('btnVerRecomendado').onclick = function() {
+                abrirModal(idRecomendado);
+            };
+
+            document.getElementById('resultadoRecomendacion').classList.remove('hidden');
+            document.getElementById('resultadoRecomendacion').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function cerrarRecomendacion() {
+            document.getElementById('resultadoRecomendacion').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
