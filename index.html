@@ -154,7 +154,7 @@
         </div>
     </section>
 
-    <!-- CATALOGO DE RUTINAS (LIMPIO) -->
+    <!-- CATALOGO DE RUTINAS -->
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h3 class="text-lg md:text-xl font-bold uppercase text-gray-300 tracking-wider">Catálogo de Programas</h3>
@@ -234,7 +234,7 @@
 
         </div>
 
-        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA ($80.000) -->
+        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA ($90.000) -->
         <div class="mt-8 bg-gradient-to-r from-cardBg via-neutral-900 to-cardBg border-2 border-gold rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-widest">
                 Exclusivo 1v1
@@ -247,7 +247,7 @@
                 Coordiná una videollamada diagnóstica directa con el entrenador Claudio Báez. Analizamos tus objetivos, lesiones y disponibilidad para diseñar un plan exclusivo para vos.
             </p>
             <button onclick="abrirModalPersonalizado()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-xs inline-flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($80.000)
+                <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($90.000)
             </button>
         </div>
     </main>
@@ -275,14 +275,14 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- VISTA SELECCIÓN DE NIVELES (NUEVO) -->
+            <!-- VISTA SELECCIÓN DE NIVELES -->
             <div id="modalVistaNiveles">
                 <span id="modalCategoriaTag" class="bg-gold/20 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">Categoría</span>
                 <h3 id="modalCategoriaTitulo" class="text-2xl font-black uppercase text-white mt-2 mb-1">Seleccionar Nivel</h3>
                 <p class="text-xs text-gray-400 mb-6">Elige el nivel que mejor se adapte a tu experiencia actual:</p>
 
                 <div id="listaNivelesModal" class="space-y-3">
-                    <!-- Los niveles se cargan dinámicamente aquí -->
+                    <!-- Niveles dinámicos -->
                 </div>
             </div>
 
@@ -395,40 +395,6 @@
                     </div>
                 </form>
             </div>
-
-            <!-- CONTENIDO PASO 3: SIMULACION DE GMAIL AUTOMATICO -->
-            <div id="modalPaso3" class="hidden text-center py-4">
-                <div class="w-16 h-16 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center mx-auto mb-4 border border-green-500/40 text-2xl">
-                    <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <h3 class="text-xl font-black uppercase text-white mb-1">¡Pago Aprobado con Éxito!</h3>
-                <p class="text-xs text-gray-300 mb-6">El sistema automatizado acaba de procesar tu compra y enviarle tu rutina.</p>
-
-                <!-- SIMULACION BANDEJA GMAIL -->
-                <div class="bg-neutral-900 border border-neutral-700 rounded-xl p-4 text-left mb-6 shadow-inner">
-                    <div class="flex items-center justify-between border-b border-neutral-800 pb-2 mb-3">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-envelope text-red-400 text-sm"></i>
-                            <span class="text-xs font-bold text-white">Simulación de Bandeja de Entrada (Gmail)</span>
-                        </div>
-                        <span class="text-[10px] text-green-400 bg-green-500/10 px-2 py-0.5 rounded">Enviado hace 1s</span>
-                    </div>
-                    <p class="text-[11px] text-gray-400 mb-1"><strong class="text-white">De:</strong> Claudio Báez Training &lt;automatizaciones@claudiobaez.fit&gt;</p>
-                    <p class="text-[11px] text-gray-400 mb-3"><strong class="text-white">Para:</strong> <span id="correoDestinoSpan" class="text-gold">tucorreo@gmail.com</span></p>
-                    
-                    <div class="bg-black/60 p-3 rounded-lg border border-neutral-800 text-xs space-y-2">
-                        <p class="text-white font-bold">¡Hola <span id="nombreDestinoSpan">Atleta</span>! Tu plan ya está listo.</p>
-                        <p class="text-gray-300 text-[11px]">Adjuntamos tu rutina personalizada en PDF junto con las recomendaciones de alimentación según tu ficha técnica.</p>
-                        <a href="#" onclick="alert('¡Descarga simulada del PDF de entrenamiento de Claudio Báez iniciada con éxito!'); return false;" class="inline-flex items-center gap-2 bg-gold text-black font-extrabold px-4 py-2 rounded-lg text-xs uppercase hover:bg-gold-light transition mt-2">
-                            <i class="fa-solid fa-download"></i> Descargar Rutina en PDF (.PDF)
-                        </a>
-                    </div>
-                </div>
-
-                <button onclick="cerrarModal()" class="bg-neutral-800 hover:bg-neutral-700 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition">
-                    Cerrar ventana
-                </button>
-            </div>
         </div>
     </div>
 
@@ -440,6 +406,7 @@
                 titulo: "HIPERTROFIA • NIVEL INICIAL",
                 subtitulo: "Fundamentos del Crecimiento Muscular",
                 precio: "$40.000",
+                linkMp: "https://mpago.la/2ykUDxA",
                 tag: "Hipertrofia",
                 desc: "Diseñado para quienes se inician en el gimnasio. Enfoque en la correcta ejecución técnica, adaptación anatómica y estímulo inicial para ganar masa muscular.",
                 duracion: "3-4 días/sem",
@@ -450,6 +417,7 @@
                 titulo: "HIPERTROFIA • NIVEL INTERMEDIO",
                 subtitulo: "Desarrollo y Volumen Muscular",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/19SdwUr",
                 tag: "Hipertrofia",
                 desc: "Para atletas con base sólida. Mayor volumen de entrenamiento, combinación de ejercicios compuestos y técnicas de intensidad para romper estancamientos.",
                 duracion: "4-5 días/sem",
@@ -460,6 +428,7 @@
                 titulo: "HIPERTROFIA • NIVEL AVANZADO",
                 subtitulo: "Máxima Exigencia y Densidad",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/33GEmjG",
                 tag: "Hipertrofia",
                 desc: "Rutina altamente demandante con técnicas avanzadas de intensidad (drop sets, superseries, fallo muscular) para maximizar volumen y definición.",
                 duracion: "5-6 días/sem",
@@ -472,6 +441,7 @@
                 titulo: "FUERZA • NIVEL INICIAL",
                 subtitulo: "Bases de los Movimientos Básicos",
                 precio: "$40.000",
+                linkMp: "https://mpago.la/2noBSNn",
                 tag: "Fuerza",
                 desc: "Enfoque principal en dominar la técnica de los tres grandes (sentadilla, press de banca, peso muerto) y construir una base sólida de fuerza.",
                 duracion: "3 días/sem",
@@ -482,6 +452,7 @@
                 titulo: "FUERZA • NIVEL INTERMEDIO",
                 subtitulo: "Progresión de Cargas y Potencia",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/2WGEZ3s",
                 tag: "Fuerza",
                 desc: "Programación orientada a la ganancia de fuerza máxima mediante esquemas de porcentajes y periodización de cargas.",
                 duracion: "4 días/sem",
@@ -492,6 +463,7 @@
                 titulo: "FUERZA • NIVEL AVANZADO",
                 subtitulo: "Rendimiento Máximo y Marcas",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/2r3qRz5",
                 tag: "Fuerza",
                 desc: "Sistema avanzado de bloques de fuerza y picos de rendimiento para romper récords personales en levantamientos principales.",
                 duracion: "4-5 días/sem",
@@ -504,6 +476,7 @@
                 titulo: "HIIT • NIVEL INICIAL",
                 subtitulo: "Acondicionamiento y Quema Base",
                 precio: "$40.000",
+                linkMp: "https://mpago.la/1u8KHPR",
                 tag: "HIIT",
                 desc: "Intervalos de alta intensidad adaptados para mejorar la capacidad cardiovascular y quemar calorías sin comprometer las articulaciones.",
                 duracion: "3 días/sem",
@@ -514,6 +487,7 @@
                 titulo: "HIIT • NIVEL INTERMEDIO",
                 subtitulo: "Resistencia y Aceleración Metabólica",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/16D8WU7",
                 tag: "HIIT",
                 desc: "Mayor exigencia cardiovascular con intervalos dinámicos orientados a oxidar grasa y mejorar la resistencia anaeróbica.",
                 duracion: "4 días/sem",
@@ -524,6 +498,7 @@
                 titulo: "HIIT • NIVEL AVANZADO",
                 subtitulo: "Alta Intensidad Extrema",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/16D8WU7",
                 tag: "HIIT",
                 desc: "Circuitos explosivos de máxima exigencia física y mental. Diseñado para atletas con excelente condición cardiovascular previa.",
                 duracion: "4-5 días/sem",
@@ -536,6 +511,7 @@
                 titulo: "METABÓLICA • NIVEL INICIAL",
                 subtitulo: "Fuerza y Quema Combinada",
                 precio: "$40.000",
+                linkMp: "https://mpago.la/2662Byg",
                 tag: "Metabólica",
                 desc: "Circuitos que combinan ejercicios de fuerza liviana con aeróbicos para empezar a tonificar y reactivar el metabolismo.",
                 duracion: "3-4 días/sem",
@@ -546,6 +522,7 @@
                 titulo: "METABÓLICA • NIVEL INTERMEDIO",
                 subtitulo: "Tonificación y Oxidación Avanzada",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/2UQzdpA",
                 tag: "Metabólica",
                 desc: "Combinación óptima de bloques de fuerza y estaciones metabólicas para mantener masa muscular mientras se reduce grasa corporal.",
                 duracion: "4-5 días/sem",
@@ -556,6 +533,7 @@
                 titulo: "METABÓLICA • NIVEL AVANZADO",
                 subtitulo: "Resistencia Total y Estética",
                 precio: "$50.000",
+                linkMp: "https://mpago.la/1dqgD56",
                 tag: "Metabólica",
                 desc: "Alta densidad de trabajo combinando cargas desafiantes y circuitos metabólicos extremos para un físico atlético y definido.",
                 duracion: "5 días/sem",
@@ -567,7 +545,8 @@
             personalizado: {
                 titulo: "PLAN 100% PERSONALIZADO + VIDEOLLAMADA",
                 subtitulo: "Asesoría 1v1 con Claudio Báez",
-                precio: "$80.000",
+                precio: "$90.000",
+                linkMp: "https://mpago.la/2gdtoRs",
                 tag: "Exclusivo 1v1",
                 desc: "Incluye una videollamada diagnóstica directa con Claudio Báez para analizar tus objetivos, historial, lesiones y diseñar un programa a tu completa medida.",
                 duracion: "A medida",
@@ -577,6 +556,7 @@
         };
 
         let categoriaActual = '';
+        let planActual = 'hip_inicial';
 
         function abrirSelectorNiveles(categoria) {
             categoriaActual = categoria;
@@ -613,7 +593,6 @@
             document.getElementById('modalVistaNiveles').classList.remove('hidden');
             document.getElementById('modalPaso1').classList.add('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPaso3').classList.add('hidden');
             document.getElementById('modalPlan').classList.remove('hidden');
         }
 
@@ -623,6 +602,7 @@
         }
 
         function abrirModal(id) {
+            planActual = id;
             const p = planes[id];
             document.getElementById('modalTag').innerText = p.tag;
             document.getElementById('modalTitulo').innerText = p.titulo;
@@ -637,11 +617,11 @@
             document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPaso3').classList.add('hidden');
             document.getElementById('modalPlan').classList.remove('hidden');
         }
 
         function abrirModalPersonalizado() {
+            planActual = 'personalizado';
             const p = planes['personalizado'];
             document.getElementById('modalTag').innerText = p.tag;
             document.getElementById('modalTitulo').innerText = p.titulo;
@@ -656,7 +636,6 @@
             document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPaso3').classList.add('hidden');
             document.getElementById('modalPlan').classList.remove('hidden');
         }
 
@@ -676,14 +655,14 @@
 
         function procesarPago(e) {
             e.preventDefault();
-            const email = document.getElementById('emailUser').value;
-            const nombre = document.getElementById('nombreUser').value;
-
-            document.getElementById('correoDestinoSpan').innerText = email;
-            document.getElementById('nombreDestinoSpan').innerText = nombre;
-
-            document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPaso3').classList.remove('hidden');
+            const planSeleccionado = planes[planActual];
+            
+            if (planSeleccionado && planSeleccionado.linkMp) {
+                // Redirige directamente al link oficial de Mercado Pago correspondiente
+                window.location.href = planSeleccionado.linkMp;
+            } else {
+                alert('Error al procesar el enlace de pago. Por favor, intenta nuevamente.');
+            }
         }
 
         function recomendarPlan() {
