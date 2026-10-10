@@ -34,9 +34,9 @@
     <header class="bg-black border-b border-gold/20 py-6 px-4 text-center relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
-            <!-- LOGO / IMAGEN 1 (Puro PNG sin fondos de caja) -->
-            <div class="w-44 md:w-56 h-auto mb-3 flex items-center justify-center">
-                <img src="image.png" alt="Claudio Baez Logo" class="w-full h-auto object-contain drop-shadow-[0_10px_10px_rgba(212,175,55,0.2)]">
+            <!-- LOGO / IMAGEN 1 -->
+            <div class="w-40 md:w-52 h-auto mb-3 flex items-center justify-center">
+                <img src="image.png" alt="Claudio Baez Logo" class="w-full h-auto object-contain">
             </div>
             <h1 class="text-2xl md:text-4xl font-black tracking-wider uppercase text-white mb-1">
                 CLAUDIO BAEZ
@@ -154,7 +154,7 @@
         </div>
     </section>
 
-    <!-- CATALOGO DE RUTINAS (IMAGENES CON MAS COLOR Y VIVOS) -->
+    <!-- CATALOGO DE RUTINAS (IMAGENES COMPLETAS EN CUADRANTE DE FOTO) -->
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h3 class="text-lg md:text-xl font-bold uppercase text-gray-300 tracking-wider">Catálogo de Programas</h3>
@@ -164,71 +164,83 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- RUTINA 1: HIPERTROFIA (Imagen 3 con color vivo) -->
-            <div onclick="abrirSelectorNiveles('Hipertrofia')" class="border border-gold/40 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between p-6 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(14,14,14,0.65), rgba(14,14,14,0.85)), url('image_3.png');">
-                <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40 shadow">
-                    Catálogo 1
+            <!-- RUTINA 1: HIPERTROFIA -->
+            <div onclick="abrirSelectorNiveles('Hipertrofia')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
+                <div class="relative h-64 bg-black/80 flex items-center justify-center overflow-hidden border-b border-neutral-800 p-2">
+                    <img src="image_3.png" alt="Hipertrofia" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">
+                        Catálogo 1
+                    </div>
                 </div>
-                <div class="mb-6 relative z-10">
-                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1 drop-shadow-md">HIPERTROFIA</h4>
-                    <p class="text-xs font-semibold uppercase text-white drop-shadow">Máximo Crecimiento Muscular</p>
-                </div>
-                <div class="flex items-center justify-between pt-4 border-t border-neutral-700/60 relative z-10">
-                    <span class="text-xs text-gray-200 uppercase font-bold drop-shadow">3 Niveles disponibles</span>
-                    <span class="text-xs font-extrabold uppercase text-gold group-hover:underline flex items-center gap-1 drop-shadow">
-                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-                </div>
-            </div>
-
-            <!-- RUTINA 2: FUERZA (Imagen 4 con color vivo) -->
-            <div onclick="abrirSelectorNiveles('Fuerza')" class="border border-gold/40 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between p-6 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(14,14,14,0.65), rgba(14,14,14,0.85)), url('image_4.png');">
-                <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40 shadow">
-                    Catálogo 2
-                </div>
-                <div class="mb-6 relative z-10">
-                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1 drop-shadow-md">FUERZA</h4>
-                    <p class="text-xs font-semibold uppercase text-white drop-shadow">Potenciá tu Rendimiento</p>
-                </div>
-                <div class="flex items-center justify-between pt-4 border-t border-neutral-700/60 relative z-10">
-                    <span class="text-xs text-gray-200 uppercase font-bold drop-shadow">3 Niveles disponibles</span>
-                    <span class="text-xs font-extrabold uppercase text-gold group-hover:underline flex items-center gap-1 drop-shadow">
-                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="p-6">
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIPERTROFIA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Máximo Crecimiento Muscular</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-neutral-800">
+                        <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                        <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                            Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            <!-- RUTINA 3: HIIT (Imagen 5 con color vivo) -->
-            <div onclick="abrirSelectorNiveles('HIIT')" class="border border-gold/40 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between p-6 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(14,14,14,0.65), rgba(14,14,14,0.85)), url('image_5.png');">
-                <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40 shadow">
-                    Catálogo 3
+            <!-- RUTINA 2: FUERZA -->
+            <div onclick="abrirSelectorNiveles('Fuerza')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
+                <div class="relative h-64 bg-black/80 flex items-center justify-center overflow-hidden border-b border-neutral-800 p-2">
+                    <img src="image_4.png" alt="Fuerza" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">
+                        Catálogo 2
+                    </div>
                 </div>
-                <div class="mb-6 relative z-10">
-                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1 drop-shadow-md">HIIT</h4>
-                    <p class="text-xs font-semibold uppercase text-white drop-shadow">Quemá Calorías, Ganá Resistencia</p>
-                </div>
-                <div class="flex items-center justify-between pt-4 border-t border-neutral-700/60 relative z-10">
-                    <span class="text-xs text-gray-200 uppercase font-bold drop-shadow">3 Niveles disponibles</span>
-                    <span class="text-xs font-extrabold uppercase text-gold group-hover:underline flex items-center gap-1 drop-shadow">
-                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="p-6">
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">FUERZA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Potenciá tu Rendimiento</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-neutral-800">
+                        <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                        <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                            Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            <!-- RUTINA 4: METABÓLICA (Imagen 2 con color vivo) -->
-            <div onclick="abrirSelectorNiveles('Metabólica')" class="border border-gold/40 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between p-6 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(14,14,14,0.65), rgba(14,14,14,0.85)), url('image_2.png');">
-                <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40 shadow">
-                    Catálogo 4
+            <!-- RUTINA 3: HIIT -->
+            <div onclick="abrirSelectorNiveles('HIIT')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
+                <div class="relative h-64 bg-black/80 flex items-center justify-center overflow-hidden border-b border-neutral-800 p-2">
+                    <img src="image_5.png" alt="HIIT" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">
+                        Catálogo 3
+                    </div>
                 </div>
-                <div class="mb-6 relative z-10">
-                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1 drop-shadow-md">METABÓLICA</h4>
-                    <p class="text-xs font-semibold uppercase text-white drop-shadow">Fuerza + Resistencia + Quema</p>
+                <div class="p-6">
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIIT</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Quemá Calorías, Ganá Resistencia</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-neutral-800">
+                        <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                        <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                            Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="flex items-center justify-between pt-4 border-t border-neutral-700/60 relative z-10">
-                    <span class="text-xs text-gray-200 uppercase font-bold drop-shadow">3 Niveles disponibles</span>
-                    <span class="text-xs font-extrabold uppercase text-gold group-hover:underline flex items-center gap-1 drop-shadow">
-                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+            </div>
+
+            <!-- RUTINA 4: METABÓLICA -->
+            <div onclick="abrirSelectorNiveles('Metabólica')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl overflow-hidden cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
+                <div class="relative h-64 bg-black/80 flex items-center justify-center overflow-hidden border-b border-neutral-800 p-2">
+                    <img src="image_2.png" alt="Metabólica" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">
+                        Catálogo 4
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">METABÓLICA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Fuerza + Resistencia + Quema</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-neutral-800">
+                        <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                        <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                            Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -683,7 +695,7 @@
             if (experiencia === 'avanzado' && actividad === 'si') {
                 idRecomendado = 'fuerza_avanzado';
                 tituloRec = "Fuerza - Nivel Avanzado";
-                descRec = "Perfecta para romper estancamientos y potenciar tu marcas en cargas pesadas.";
+                descRec = "Perfecta para romper estancamientos y potenciar tus marcas en cargas pesadas.";
             } else if (peso > 80 && actividad === 'no') {
                 idRecomendado = 'meta_inicial';
                 tituloRec = "Metabólica - Nivel Inicial";
