@@ -154,149 +154,81 @@
         </div>
     </section>
 
-    <!-- CATALOGO DE RUTINAS (CON NIVELES) -->
+    <!-- CATALOGO DE RUTINAS (LIMPIO) -->
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h3 class="text-lg md:text-xl font-bold uppercase text-gray-300 tracking-wider">Catálogo de Programas</h3>
             <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
-            <p class="text-xs text-gray-400 mt-2">Seleccioná una categoría para ver los niveles disponibles y adquirir tu plan.</p>
+            <p class="text-xs text-gray-400 mt-2">Hacé clic en cualquier rutina para ver los niveles disponibles y adquirir tu plan.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- CATÁLOGO 1: HIPERTROFIA -->
-            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
+            <!-- RUTINA 1: HIPERTROFIA -->
+            <div onclick="abrirSelectorNiveles('Hipertrofia')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
                     Catálogo 1
                 </div>
                 <div>
                     <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIPERTROFIA</h4>
-                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Máximo Crecimiento Muscular</p>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-6">Máximo Crecimiento Muscular</p>
                 </div>
-                <div class="space-y-2 pt-3 border-t border-neutral-800">
-                    <div onclick="abrirModal('hip_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
-                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('hip_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('hip_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
+                <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                    <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
             </div>
 
-            <!-- CATÁLOGO 2: FUERZA -->
-            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
+            <!-- RUTINA 2: FUERZA -->
+            <div onclick="abrirSelectorNiveles('Fuerza')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
                     Catálogo 2
                 </div>
                 <div>
                     <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">FUERZA</h4>
-                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Potenciá tu Rendimiento</p>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-6">Potenciá tu Rendimiento</p>
                 </div>
-                <div class="space-y-2 pt-3 border-t border-neutral-800">
-                    <div onclick="abrirModal('fuerza_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
-                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('fuerza_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('fuerza_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
+                <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                    <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
             </div>
 
-            <!-- CATÁLOGO 3: HIIT -->
-            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
+            <!-- RUTINA 3: HIIT -->
+            <div onclick="abrirSelectorNiveles('HIIT')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
                     Catálogo 3
                 </div>
                 <div>
                     <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIIT</h4>
-                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Quemá Calorías, Ganá Resistencia</p>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-6">Quemá Calorías, Ganá Resistencia</p>
                 </div>
-                <div class="space-y-2 pt-3 border-t border-neutral-800">
-                    <div onclick="abrirModal('hiit_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
-                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('hiit_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('hiit_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
+                <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                    <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
             </div>
 
-            <!-- CATÁLOGO 4: METABÓLICA -->
-            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
+            <!-- RUTINA 4: METABÓLICA -->
+            <div onclick="abrirSelectorNiveles('Metabólica')" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
                     Catálogo 4
                 </div>
                 <div>
                     <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">METABÓLICA</h4>
-                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Fuerza + Resistencia + Quema</p>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-6">Fuerza + Resistencia + Quema</p>
                 </div>
-                <div class="space-y-2 pt-3 border-t border-neutral-800">
-                    <div onclick="abrirModal('meta_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
-                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('meta_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
-                    <div onclick="abrirModal('meta_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
-                        <div>
-                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
-                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
-                        </div>
-                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
-                    </div>
+                <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                    <span class="text-xs text-gray-400 uppercase">3 Niveles disponibles</span>
+                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
+                        Ver niveles <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
             </div>
 
@@ -336,16 +268,30 @@
         </div>
     </footer>
 
-    <!-- MODAL DE DETALLE Y COMPRA -->
+    <!-- MODAL PRINCIPAL -->
     <div id="modalPlan" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-cardBg border border-gold rounded-2xl max-w-lg w-full p-6 relative shadow-2xl my-8">
             <button onclick="cerrarModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center border border-neutral-700">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- CONTENIDO PASO 1: DETALLE -->
-            <div id="modalPaso1">
-                <span id="modalTag" class="bg-gold/20 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">Rutina</span>
+            <!-- VISTA SELECCIÓN DE NIVELES (NUEVO) -->
+            <div id="modalVistaNiveles">
+                <span id="modalCategoriaTag" class="bg-gold/20 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">Categoría</span>
+                <h3 id="modalCategoriaTitulo" class="text-2xl font-black uppercase text-white mt-2 mb-1">Seleccionar Nivel</h3>
+                <p class="text-xs text-gray-400 mb-6">Elige el nivel que mejor se adapte a tu experiencia actual:</p>
+
+                <div id="listaNivelesModal" class="space-y-3">
+                    <!-- Los niveles se cargan dinámicamente aquí -->
+                </div>
+            </div>
+
+            <!-- CONTENIDO PASO 1: DETALLE DEL NIVEL SELECCIONADO -->
+            <div id="modalPaso1" class="hidden">
+                <button onclick="volverANiveles()" class="text-xs text-gold flex items-center gap-1 mb-4 hover:underline">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a los niveles
+                </button>
+                <span id="modalTag" class="bg-gold/20 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/40">Nivel</span>
                 <h3 id="modalTitulo" class="text-2xl font-black uppercase text-white mt-2 mb-1">Nombre del Plan</h3>
                 <p id="modalSubtitulo" class="text-xs text-gold font-semibold uppercase mb-4">Subtítulo descriptivo</p>
                 
@@ -630,10 +576,53 @@
             }
         };
 
-        let planActual = 'hip_inicial';
+        let categoriaActual = '';
+
+        function abrirSelectorNiveles(categoria) {
+            categoriaActual = categoria;
+            document.getElementById('modalCategoriaTag').innerText = "Categoría " + categoria;
+            document.getElementById('modalCategoriaTitulo').innerText = "Rutina de " + categoria;
+
+            const listaNiveles = document.getElementById('listaNivelesModal');
+            listaNiveles.innerHTML = '';
+
+            let prefix = '';
+            if (categoria === 'Hipertrofia') prefix = 'hip';
+            else if (categoria === 'Fuerza') prefix = 'fuerza';
+            else if (categoria === 'HIIT') prefix = 'hiit';
+            else if (categoria === 'Metabólica') prefix = 'meta';
+
+            const nivelesDisponibles = [
+                { id: prefix + '_inicial', nombre: 'Nivel Inicial', precio: '$40.000' },
+                { id: prefix + '_intermedio', nombre: 'Nivel Intermedio', precio: '$50.000' },
+                { id: prefix + '_avanzado', nombre: 'Nivel Avanzado', precio: '$50.000' }
+            ];
+
+            nivelesDisponibles.forEach(niv => {
+                listaNiveles.innerHTML += `
+                    <div onclick="abrirModal('${niv.id}')" class="flex justify-between items-center bg-black/60 hover:bg-gold/10 p-3 rounded-xl cursor-pointer border border-neutral-800 hover:border-gold transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">${niv.nombre}</span>
+                            <span class="text-[10px] text-gray-400">Valor: ${niv.precio}</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Seleccionar <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                `;
+            });
+
+            document.getElementById('modalVistaNiveles').classList.remove('hidden');
+            document.getElementById('modalPaso1').classList.add('hidden');
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso3').classList.add('hidden');
+            document.getElementById('modalPlan').classList.remove('hidden');
+        }
+
+        function volverANiveles() {
+            document.getElementById('modalPaso1').classList.add('hidden');
+            document.getElementById('modalVistaNiveles').classList.remove('hidden');
+        }
 
         function abrirModal(id) {
-            planActual = id;
             const p = planes[id];
             document.getElementById('modalTag').innerText = p.tag;
             document.getElementById('modalTitulo').innerText = p.titulo;
@@ -645,6 +634,7 @@
             document.getElementById('modalPrecio').innerText = p.precio;
             document.getElementById('precioCheckout').innerText = p.precio;
 
+            document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
             document.getElementById('modalPaso3').classList.add('hidden');
@@ -652,7 +642,6 @@
         }
 
         function abrirModalPersonalizado() {
-            planActual = 'personalizado';
             const p = planes['personalizado'];
             document.getElementById('modalTag').innerText = p.tag;
             document.getElementById('modalTitulo').innerText = p.titulo;
@@ -664,6 +653,7 @@
             document.getElementById('modalPrecio').innerText = p.precio;
             document.getElementById('precioCheckout').innerText = p.precio;
 
+            document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
             document.getElementById('modalPaso3').classList.add('hidden');
