@@ -48,7 +48,7 @@
                 PLANES DE ENTRENAMIENTO
             </h2>
             <p class="text-xs md:text-sm text-gray-400 mt-1 uppercase tracking-wider">
-                Rutinas Personalizadas | Nivel Avanzado
+                Rutinas Personalizadas por Nivel
             </p>
         </div>
     </header>
@@ -144,121 +144,165 @@
             <!-- Resultado Recomendación -->
             <div id="resultadoRecomendacion" class="hidden mt-6 p-5 bg-neutral-900 border border-gold rounded-xl text-center">
                 <span class="text-xs uppercase tracking-widest text-gold font-bold">¡Plan ideal para vos!</span>
-                <h4 id="recTitulo" class="text-xl font-black text-white mt-1">Rutina 1: Hipertrofia</h4>
-                <p id="recDesc" class="text-xs text-gray-300 mt-2 max-w-lg mx-auto">Basado en tus datos, este plan maximizará tu crecimiento muscular y desarrollo de fuerza.</p>
+                <h4 id="recTitulo" class="text-xl font-black text-white mt-1">Rutina Recomendada</h4>
+                <p id="recDesc" class="text-xs text-gray-300 mt-2 max-w-lg mx-auto">Basado en tus datos, este plan maximizará tu rendimiento.</p>
                 <div class="mt-4 flex flex-wrap justify-center gap-3">
-                    <button id="btnVerRecomendado" class="bg-gold text-black font-bold px-5 py-2 rounded-lg text-xs uppercase hover:bg-gold-light transition">Ver detalles y comprar</button>
+                    <button id="btnVerRecomendado" class="bg-gold text-black font-bold px-5 py-2 rounded-lg text-xs uppercase hover:bg-gold-light transition">Ver niveles y comprar</button>
                     <button onclick="cerrarRecomendacion()" class="bg-neutral-800 text-gray-300 px-4 py-2 rounded-lg text-xs uppercase hover:bg-neutral-700 transition">Ver todo el catálogo</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CATALOGO DE RUTINAS -->
+    <!-- CATALOGO DE RUTINAS (CON NIVELES) -->
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h3 class="text-lg md:text-xl font-bold uppercase text-gray-300 tracking-wider">Catálogo de Programas</h3>
             <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
-            <p class="text-xs text-gray-400 mt-2">Hacé clic en cualquier tarjeta para ver el contenido completo y adquirir tu plan.</p>
+            <p class="text-xs text-gray-400 mt-2">Seleccioná una categoría para ver los niveles disponibles y adquirir tu plan.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- RUTINA 1 -->
-            <div onclick="abrirModal(1)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+            <!-- CATÁLOGO 1: HIPERTROFIA -->
+            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
-                    Rutina 1
+                    Catálogo 1
                 </div>
-                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIPERTROFIA</h4>
-                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Máximo Crecimiento Muscular</p>
-                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
-                    Rutina enfocada en estimular la hipertrofia muscular con combinación de ejercicios compuestos, aislamiento y técnicas de intensidad.
-                </p>
-                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
-                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 5-6 días/sem</div>
-                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 60-75 min</div>
-                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                <div>
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIPERTROFIA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Máximo Crecimiento Muscular</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-lg font-black text-white">$40.000</span>
-                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
-                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="space-y-2 pt-3 border-t border-neutral-800">
+                    <div onclick="abrirModal('hip_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
+                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('hip_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('hip_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- RUTINA 2 -->
-            <div onclick="abrirModal(2)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+            <!-- CATÁLOGO 2: FUERZA -->
+            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
-                    Rutina 2
+                    Catálogo 2
                 </div>
-                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">FUERZA</h4>
-                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Potenciá tu Rendimiento</p>
-                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
-                    Enfocada en aumentar tu fuerza máxima y mejorar la técnica en los movimientos principales. Ideal para quienes buscan progresar en cargas.
-                </p>
-                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
-                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 4-5 días/sem</div>
-                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 60-75 min</div>
-                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                <div>
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">FUERZA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Potenciá tu Rendimiento</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-lg font-black text-white">$40.000</span>
-                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
-                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="space-y-2 pt-3 border-t border-neutral-800">
+                    <div onclick="abrirModal('fuerza_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
+                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('fuerza_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('fuerza_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- RUTINA 3 -->
-            <div onclick="abrirModal(3)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+            <!-- CATÁLOGO 3: HIIT -->
+            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
-                    Rutina 3
+                    Catálogo 3
                 </div>
-                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIIT</h4>
-                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Quemá Calorías, Ganá Resistencia</p>
-                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
-                    Rutina de alta intensidad con intervalos cortos y descansos activos. Ideal para mejorar capacidad cardiovascular y acelerar el metabolismo.
-                </p>
-                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
-                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 4-6 días/sem</div>
-                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 30-45 min</div>
-                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                <div>
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">HIIT</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Quemá Calorías, Ganá Resistencia</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-lg font-black text-white">$35.000</span>
-                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
-                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="space-y-2 pt-3 border-t border-neutral-800">
+                    <div onclick="abrirModal('hiit_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
+                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('hiit_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('hiit_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- RUTINA 4 -->
-            <div onclick="abrirModal(4)" class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 cursor-pointer transition transform hover:-translate-y-1 shadow-xl relative group">
+            <!-- CATÁLOGO 4: METABÓLICA -->
+            <div class="bg-cardBg border border-gold/30 hover:border-gold rounded-2xl p-6 transition shadow-xl relative flex flex-col justify-between">
                 <div class="absolute top-4 right-4 bg-gold/10 text-gold text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-widest border border-gold/30">
-                    Rutina 4
+                    Catálogo 4
                 </div>
-                <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">METABÓLICA</h4>
-                <p class="text-xs font-semibold uppercase text-gray-300 mb-3">Fuerza + Resistencia + Quema</p>
-                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
-                    Combinación de trabajo de fuerza, intervalos y circuitos metabólicos para mejorar resistencia, mantener masa muscular y oxidar grasa.
-                </p>
-                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4">
-                    <div><i class="fa-solid fa-calendar-days text-gold mr-1"></i> 5-6 días/sem</div>
-                    <div><i class="fa-solid fa-clock text-gold mr-1"></i> 45-70 min</div>
-                    <div><i class="fa-solid fa-chart-simple text-gold mr-1"></i> Avanzado</div>
+                <div>
+                    <h4 class="text-xl font-black uppercase text-gold tracking-wide mb-1">METABÓLICA</h4>
+                    <p class="text-xs font-semibold uppercase text-gray-300 mb-4">Fuerza + Resistencia + Quema</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-lg font-black text-white">$40.000</span>
-                    <span class="text-xs font-bold uppercase text-gold group-hover:underline flex items-center gap-1">
-                        Plan completo + Explicación <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                <div class="space-y-2 pt-3 border-t border-neutral-800">
+                    <div onclick="abrirModal('meta_inicial')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Inicial</span>
+                            <span class="text-[10px] text-gray-400">Desde $40.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('meta_intermedio')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Intermedio</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                    <div onclick="abrirModal('meta_avanzado')" class="flex justify-between items-center bg-black/40 hover:bg-gold/10 p-2.5 rounded-lg cursor-pointer border border-neutral-800 hover:border-gold/50 transition">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Nivel Avanzado</span>
+                            <span class="text-[10px] text-gray-400">Desde $50.000</span>
+                        </div>
+                        <span class="text-xs font-bold text-gold">Ver <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA -->
+        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA ($80.000) -->
         <div class="mt-8 bg-gradient-to-r from-cardBg via-neutral-900 to-cardBg border-2 border-gold rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-widest">
                 Exclusivo 1v1
@@ -271,7 +315,7 @@
                 Coordiná una videollamada diagnóstica directa con el entrenador Claudio Báez. Analizamos tus objetivos, lesiones y disponibilidad para diseñar un plan exclusivo para vos.
             </p>
             <button onclick="abrirModalPersonalizado()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-xs inline-flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($55.000)
+                <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($80.000)
             </button>
         </div>
     </main>
@@ -308,6 +352,13 @@
                 <p id="modalDescripcion" class="text-xs text-gray-300 mb-6 leading-relaxed">
                     Descripción detallada del plan de entrenamiento.
                 </p>
+
+                <!-- DATOS TECNICOS EN EL MODAL -->
+                <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-neutral-800 text-[11px] text-gray-300 mb-4 text-center">
+                    <div><i class="fa-solid fa-calendar-days text-gold block mb-1"></i> <span id="modalDuracion">3-4 días/sem</span></div>
+                    <div><i class="fa-solid fa-clock text-gold block mb-1"></i> <span id="modalTiempo">45-60 min</span></div>
+                    <div><i class="fa-solid fa-chart-simple text-gold block mb-1"></i> <span id="modalNivel">Inicial</span></div>
+                </div>
 
                 <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-800 mb-6 space-y-2 text-xs text-gray-300">
                     <div class="flex justify-between font-bold text-white border-b border-neutral-800 pb-2">
@@ -438,49 +489,148 @@
     <!-- JAVASCRIPT DE FUNCIONAMIENTO -->
     <script>
         const planes = {
-            1: {
-                titulo: "RUTINA 1: HIPERTROFIA",
-                subtitulo: "Máximo Crecimiento Muscular",
+            // HIPERTROFIA
+            hip_inicial: {
+                titulo: "HIPERTROFIA • NIVEL INICIAL",
+                subtitulo: "Fundamentos del Crecimiento Muscular",
                 precio: "$40.000",
-                numPrecio: 40000,
-                tag: "Rutina 1",
-                desc: "Rutina enfocada en estimular la hipertrofia muscular con combinación de ejercicios compuestos, aislamiento y técnicas de intensidad avanzadas."
+                tag: "Hipertrofia",
+                desc: "Diseñado para quienes se inician en el gimnasio. Enfoque en la correcta ejecución técnica, adaptación anatómica y estímulo inicial para ganar masa muscular.",
+                duracion: "3-4 días/sem",
+                tiempo: "45-60 min",
+                nivel: "Inicial"
             },
-            2: {
-                titulo: "RUTINA 2: FUERZA",
-                subtitulo: "Potenciá tu Rendimiento",
+            hip_intermedio: {
+                titulo: "HIPERTROFIA • NIVEL INTERMEDIO",
+                subtitulo: "Desarrollo y Volumen Muscular",
+                precio: "$50.000",
+                tag: "Hipertrofia",
+                desc: "Para atletas con base sólida. Mayor volumen de entrenamiento, combinación de ejercicios compuestos y técnicas de intensidad para romper estancamientos.",
+                duracion: "4-5 días/sem",
+                tiempo: "60-75 min",
+                nivel: "Intermedio"
+            },
+            hip_avanzado: {
+                titulo: "HIPERTROFIA • NIVEL AVANZADO",
+                subtitulo: "Máxima Exigencia y Densidad",
+                precio: "$50.000",
+                tag: "Hipertrofia",
+                desc: "Rutina altamente demandante con técnicas avanzadas de intensidad (drop sets, superseries, fallo muscular) para maximizar volumen y definición.",
+                duracion: "5-6 días/sem",
+                tiempo: "75-90 min",
+                nivel: "Avanzado"
+            },
+
+            // FUERZA
+            fuerza_inicial: {
+                titulo: "FUERZA • NIVEL INICIAL",
+                subtitulo: "Bases de los Movimientos Básicos",
                 precio: "$40.000",
-                numPrecio: 40000,
-                tag: "Rutina 2",
-                desc: "Enfocada en aumentar tu fuerza máxima y mejorar la técnica en los movimientos principales. Ideal para quienes buscan progresar en cargas."
+                tag: "Fuerza",
+                desc: "Enfoque principal en dominar la técnica de los tres grandes (sentadilla, press de banca, peso muerto) y construir una base sólida de fuerza.",
+                duracion: "3 días/sem",
+                tiempo: "50-60 min",
+                nivel: "Inicial"
             },
-            3: {
-                titulo: "RUTINA 3: HIIT",
-                subtitulo: "Quemá Calorías, Ganá Resistencia",
-                precio: "$35.000",
-                numPrecio: 35000,
-                tag: "Rutina 3",
-                desc: "Rutina de alta intensidad con intervalos cortos y descansos activos. Ideal para mejorar capacidad cardiovascular y acelerar el metabolismo."
+            fuerza_intermedio: {
+                titulo: "FUERZA • NIVEL INTERMEDIO",
+                subtitulo: "Progresión de Cargas y Potencia",
+                precio: "$50.000",
+                tag: "Fuerza",
+                desc: "Programación orientada a la ganancia de fuerza máxima mediante esquemas de porcentajes y periodización de cargas.",
+                duracion: "4 días/sem",
+                tiempo: "60-75 min",
+                nivel: "Intermedio"
             },
-            4: {
-                titulo: "RUTINA 4: METABÓLICA",
-                subtitulo: "Fuerza + Resistencia + Quema",
+            fuerza_avanzado: {
+                titulo: "FUERZA • NIVEL AVANZADO",
+                subtitulo: "Rendimiento Máximo y Marcas",
+                precio: "$50.000",
+                tag: "Fuerza",
+                desc: "Sistema avanzado de bloques de fuerza y picos de rendimiento para romper récords personales en levantamientos principales.",
+                duracion: "4-5 días/sem",
+                tiempo: "75-90 min",
+                nivel: "Avanzado"
+            },
+
+            // HIIT
+            hiit_inicial: {
+                titulo: "HIIT • NIVEL INICIAL",
+                subtitulo: "Acondicionamiento y Quema Base",
                 precio: "$40.000",
-                numPrecio: 40000,
-                tag: "Rutina 4",
-                desc: "Combinación de trabajo de fuerza, intervalos y circuitos metabólicos para mejorar resistencia, mantener masa muscular y oxidar grasa."
+                tag: "HIIT",
+                desc: "Intervalos de alta intensidad adaptados para mejorar la capacidad cardiovascular y quemar calorías sin comprometer las articulaciones.",
+                duracion: "3 días/sem",
+                tiempo: "30-40 min",
+                nivel: "Inicial"
             },
+            hiit_intermedio: {
+                titulo: "HIIT • NIVEL INTERMEDIO",
+                subtitulo: "Resistencia y Aceleración Metabólica",
+                precio: "$50.000",
+                tag: "HIIT",
+                desc: "Mayor exigencia cardiovascular con intervalos dinámicos orientados a oxidar grasa y mejorar la resistencia anaeróbica.",
+                duracion: "4 días/sem",
+                tiempo: "35-45 min",
+                nivel: "Intermedio"
+            },
+            hiit_avanzado: {
+                titulo: "HIIT • NIVEL AVANZADO",
+                subtitulo: "Alta Intensidad Extrema",
+                precio: "$50.000",
+                tag: "HIIT",
+                desc: "Circuitos explosivos de máxima exigencia física y mental. Diseñado para atletas con excelente condición cardiovascular previa.",
+                duracion: "4-5 días/sem",
+                tiempo: "40-50 min",
+                nivel: "Avanzado"
+            },
+
+            // METABÓLICA
+            meta_inicial: {
+                titulo: "METABÓLICA • NIVEL INICIAL",
+                subtitulo: "Fuerza y Quema Combinada",
+                precio: "$40.000",
+                tag: "Metabólica",
+                desc: "Circuitos que combinan ejercicios de fuerza liviana con aeróbicos para empezar a tonificar y reactivar el metabolismo.",
+                duracion: "3-4 días/sem",
+                tiempo: "45-60 min",
+                nivel: "Inicial"
+            },
+            meta_intermedio: {
+                titulo: "METABÓLICA • NIVEL INTERMEDIO",
+                subtitulo: "Tonificación y Oxidación Avanzada",
+                precio: "$50.000",
+                tag: "Metabólica",
+                desc: "Combinación óptima de bloques de fuerza y estaciones metabólicas para mantener masa muscular mientras se reduce grasa corporal.",
+                duracion: "4-5 días/sem",
+                tiempo: "50-65 min",
+                nivel: "Intermedio"
+            },
+            meta_avanzado: {
+                titulo: "METABÓLICA • NIVEL AVANZADO",
+                subtitulo: "Resistencia Total y Estética",
+                precio: "$50.000",
+                tag: "Metabólica",
+                desc: "Alta densidad de trabajo combinando cargas desafiantes y circuitos metabólicos extremos para un físico atlético y definido.",
+                duracion: "5 días/sem",
+                tiempo: "60-75 min",
+                nivel: "Avanzado"
+            },
+
+            // PERSONALIZADO (1v1)
             personalizado: {
                 titulo: "PLAN 100% PERSONALIZADO + VIDEOLLAMADA",
                 subtitulo: "Asesoría 1v1 con Claudio Báez",
-                precio: "$55.000",
-                numPrecio: 55000,
+                precio: "$80.000",
                 tag: "Exclusivo 1v1",
-                desc: "Incluye una videollamada diagnóstica directa con Claudio Báez para analizar tus objetivos, historial y diseñar un programa a tu completa medida."
+                desc: "Incluye una videollamada diagnóstica directa con Claudio Báez para analizar tus objetivos, historial, lesiones y diseñar un programa a tu completa medida.",
+                duracion: "A medida",
+                tiempo: "Flexible",
+                nivel: "Personalizado"
             }
         };
 
-        let planActual = 1;
+        let planActual = 'hip_inicial';
 
         function abrirModal(id) {
             planActual = id;
@@ -489,6 +639,9 @@
             document.getElementById('modalTitulo').innerText = p.titulo;
             document.getElementById('modalSubtitulo').innerText = p.subtitulo;
             document.getElementById('modalDescripcion').innerText = p.desc;
+            document.getElementById('modalDuracion').innerText = p.duracion;
+            document.getElementById('modalTiempo').innerText = p.tiempo;
+            document.getElementById('modalNivel').innerText = p.nivel;
             document.getElementById('modalPrecio').innerText = p.precio;
             document.getElementById('precioCheckout').innerText = p.precio;
 
@@ -505,6 +658,9 @@
             document.getElementById('modalTitulo').innerText = p.titulo;
             document.getElementById('modalSubtitulo').innerText = p.subtitulo;
             document.getElementById('modalDescripcion').innerText = p.desc;
+            document.getElementById('modalDuracion').innerText = p.duracion;
+            document.getElementById('modalTiempo').innerText = p.tiempo;
+            document.getElementById('modalNivel').innerText = p.nivel;
             document.getElementById('modalPrecio').innerText = p.precio;
             document.getElementById('precioCheckout').innerText = p.precio;
 
@@ -552,21 +708,21 @@
                 return;
             }
 
-            let idRecomendado = 1;
-            let tituloRec = "Rutina 1: Hipertrofia";
+            let idRecomendado = 'hip_intermedio';
+            let tituloRec = "Hipertrofia - Nivel Intermedio";
             let descRec = "Ideal para tu perfil para maximizar ganancia muscular y estética.";
 
             if (experiencia === 'avanzado' && actividad === 'si') {
-                idRecomendado = 2;
-                tituloRec = "Rutina 2: Fuerza Avanzada";
+                idRecomendado = 'fuerza_avanzado';
+                tituloRec = "Fuerza - Nivel Avanzado";
                 descRec = "Perfecta para romper estancamientos y potenciar tus marcas en cargas pesadas.";
             } else if (peso > 80 && actividad === 'no') {
-                idRecomendado = 4;
-                tituloRec = "Rutina 4: Metabólica / Quema";
+                idRecomendado = 'meta_inicial';
+                tituloRec = "Metabólica - Nivel Inicial";
                 descRec = "Combinación excelente para oxidación de grasa y acondicionamiento general.";
             } else if (experiencia === 'principiante') {
-                idRecomendado = 3;
-                tituloRec = "Rutina 3: HIIT & Resistencia";
+                idRecomendado = 'hiit_inicial';
+                tituloRec = "HIIT - Nivel Inicial";
                 descRec = "Excelente para activar el metabolismo, ganar resistencia y quemar calorías.";
             }
 
