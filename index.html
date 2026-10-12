@@ -32,12 +32,10 @@
 
     <!-- HEADER / BANNER DE PORTADA PRINCIPAL -->
     <header class="relative bg-black border-b border-gold/40 overflow-hidden">
-        <!-- Imagen de Portada -->
         <div class="w-full h-auto min-h-[250px] md:min-h-[450px] relative flex items-center justify-center bg-neutral-900">
             <img src="Gemini_Generated_Image_66rct66rct66rct6.jpg" alt="Claudio Baez Portada" class="w-full h-auto object-contain max-h-[600px]">
         </div>
         
-        <!-- Texto descriptivo debajo de la portada -->
         <div class="max-w-4xl mx-auto px-4 pb-6 pt-4 text-center relative z-10 bg-black">
             <h1 class="text-2xl md:text-4xl font-black tracking-wider uppercase text-white mb-1">
                 CLAUDIO BAEZ
@@ -87,49 +85,49 @@
         </div>
     </section>
 
-    <!-- TEST DE DIAGNÓSTICO INTELIGENTE -->
+    <!-- TEST DE DIAGNÓSTICO INTELIGENTE (CON IMAGEN 2 DE FONDO) -->
     <section class="max-w-4xl mx-auto px-4 py-8">
-        <div class="bg-gradient-to-br from-neutral-900 to-cardBg border-2 border-gold/40 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+        <div class="border-2 border-gold/40 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(14,14,14,0.92), rgba(14,14,14,0.85)), url('image_asesoria.jpg');">
             <div class="absolute -right-10 -bottom-10 opacity-5 text-gold pointer-events-none">
                 <i class="fa-solid fa-clipboard-check text-9xl"></i>
             </div>
-            <div class="text-center mb-6">
-                <span class="bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Asistente Virtual</span>
-                <h3 class="text-xl md:text-2xl font-black text-white mt-2">¿NO SABÉS QUÉ RUTINA ELEGIR?</h3>
-                <p class="text-xs md:text-sm text-gray-400 mt-1">Completa tus datos en 1 minuto y te recomendamos el plan perfecto para tu meta.</p>
+            <div class="text-center mb-6 relative z-10">
+                <span class="bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gold/30">Asistente Virtual</span>
+                <h3 class="text-xl md:text-2xl font-black text-white mt-2 drop-shadow">¿NO SABÉS QUÉ RUTINA ELEGIR?</h3>
+                <p class="text-xs md:text-sm text-gray-300 mt-1 drop-shadow">Completa tus datos en 1 minuto y te recomendamos el plan perfecto para tu meta.</p>
             </div>
 
-            <form id="quizForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form id="quizForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Género</label>
-                    <select id="qGenero" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">Género</label>
+                    <select id="qGenero" class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                         <option value="otro">Otro</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Edad</label>
-                    <input type="number" id="qEdad" placeholder="Ej: 25" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">Edad</label>
+                    <input type="number" id="qEdad" placeholder="Ej: 25" required class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Altura (cm)</label>
-                    <input type="number" id="qAltura" placeholder="Ej: 175" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">Altura (cm)</label>
+                    <input type="number" id="qAltura" placeholder="Ej: 175" required class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Peso (kg)</label>
-                    <input type="number" id="qPeso" placeholder="Ej: 75" required class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">Peso (kg)</label>
+                    <input type="number" id="qPeso" placeholder="Ej: 75" required class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">¿Realizás actividad física?</label>
-                    <select id="qActividad" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">¿Realizás actividad física?</label>
+                    <select id="qActividad" class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                         <option value="si">Sí, entreno actualmente</option>
                         <option value="no">No / Hace mucho que no</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Experiencia entrenando</label>
-                    <select id="qExperiencia" class="w-full bg-black/60 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
+                    <label class="block text-xs font-bold uppercase text-gray-200 mb-1">Experiencia entrenando</label>
+                    <select id="qExperiencia" class="w-full bg-black/80 border border-neutral-700 rounded-lg p-3 text-sm text-white focus:border-gold outline-none">
                         <option value="principiante">Menos de 6 meses (Principiante)</option>
                         <option value="intermedio">6 meses a 2 años (Intermedio)</option>
                         <option value="avanzado">Más de 2 años (Avanzado)</option>
@@ -143,7 +141,7 @@
             </form>
 
             <!-- Resultado Recomendación -->
-            <div id="resultadoRecomendacion" class="hidden mt-6 p-5 bg-neutral-900 border border-gold rounded-xl text-center">
+            <div id="resultadoRecomendacion" class="hidden mt-6 p-5 bg-neutral-900/90 border border-gold rounded-xl text-center relative z-10 backdrop-blur-sm">
                 <span class="text-xs uppercase tracking-widest text-gold font-bold">¡Plan ideal para vos!</span>
                 <h4 id="recTitulo" class="text-xl font-black text-white mt-1">Rutina Recomendada</h4>
                 <p id="recDesc" class="text-xs text-gray-300 mt-2 max-w-lg mx-auto">Basado en tus datos, este plan maximizará tu rendimiento.</p>
@@ -239,19 +237,19 @@
 
         </div>
 
-        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA ($90.000) -->
-        <div class="mt-8 bg-gradient-to-r from-cardBg via-neutral-900 to-cardBg border-2 border-gold rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-2xl">
-            <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-widest">
+        <!-- SECCIÓN ASESORIA 100% PERSONALIZADA ($90.000) (CON IMAGEN 1 DE FONDO) -->
+        <div class="mt-8 border-2 border-gold rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-2xl bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(10,10,10,0.94), rgba(10,10,10,0.75)), url('image_video.jpg');">
+            <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-widest z-10">
                 Exclusivo 1v1
             </div>
-            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/10 text-gold mb-3 border border-gold/40">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/10 text-gold mb-3 border border-gold/40 relative z-10">
                 <i class="fa-solid fa-video text-xl"></i>
             </div>
-            <h4 class="text-xl md:text-2xl font-black uppercase text-white mb-2">¿Buscas algo 100% a tu medida?</h4>
-            <p class="text-xs md:text-sm text-gray-300 max-w-xl mx-auto mb-6 leading-relaxed">
+            <h4 class="text-xl md:text-2xl font-black uppercase text-white mb-2 relative z-10 drop-shadow">¿Buscas algo 100% a tu medida?</h4>
+            <p class="text-xs md:text-sm text-gray-200 max-w-xl mx-auto mb-6 leading-relaxed relative z-10 drop-shadow">
                 Coordiná una videollamada diagnóstica directa con el entrenador Claudio Baez. Analizamos tus objetivos, lesiones y disponibilidad para diseñar un plan exclusivo para vos.
             </p>
-            <button onclick="abrirModalPersonalizado()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-xs inline-flex items-center gap-2">
+            <button onclick="abrirModalPersonalizado()" class="bg-gold hover:bg-gold-light text-black font-black uppercase px-8 py-3.5 rounded-xl shadow-lg transition tracking-wider text-xs inline-flex items-center gap-2 relative z-10">
                 <i class="fa-solid fa-calendar-check"></i> Reservar Videollamada y Plan Personalizado ($90.000)
             </button>
         </div>
@@ -641,4 +639,77 @@
             document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
-            document.
+            document.getElementById('modalPlan').classList.remove('hidden');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalPlan').classList.add('hidden');
+        }
+
+        function irAlCheckout() {
+            document.getElementById('modalPaso1').classList.add('hidden');
+            document.getElementById('modalPaso2').classList.remove('hidden');
+        }
+
+        function volverAlPaso1() {
+            document.getElementById('modalPaso2').classList.add('hidden');
+            document.getElementById('modalPaso1').classList.remove('hidden');
+        }
+
+        function procesarPago(e) {
+            e.preventDefault();
+            const planSeleccionado = planes[planActual];
+            
+            if (planSeleccionado && planSeleccionado.linkMp) {
+                window.location.href = planSeleccionado.linkMp;
+            } else {
+                alert('Error al procesar el enlace de pago. Por favor, intenta nuevamente.');
+            }
+        }
+
+        function recomendarPlan() {
+            const edad = parseInt(document.getElementById('qEdad').value);
+            const peso = parseFloat(document.getElementById('qPeso').value);
+            const altura = parseFloat(document.getElementById('qAltura').value);
+            const actividad = document.getElementById('qActividad').value;
+            const experiencia = document.getElementById('qExperiencia').value;
+
+            if(!edad || !peso || !altura) {
+                alert('Por favor, completa los datos de edad, peso y altura para recibir la recomendación.');
+                return;
+            }
+
+            let idRecomendado = 'hip_intermedio';
+            let tituloRec = "Hipertrofia - Nivel Intermedio";
+            let descRec = "Ideal para tu perfil para maximizar ganancia muscular y estética.";
+
+            if (experiencia === 'avanzado' && actividad === 'si') {
+                idRecomendado = 'fuerza_avanzado';
+                tituloRec = "Fuerza - Nivel Avanzado";
+                descRec = "Perfecta para romper estancamientos y potenciar tus marcas en cargas pesadas.";
+            } else if (peso > 80 && actividad === 'no') {
+                idRecomendado = 'meta_inicial';
+                tituloRec = "Metabólica - Nivel Inicial";
+                descRec = "Combinación excelente para oxidación de grasa y acondicionamiento general.";
+            } else if (experiencia === 'principiante') {
+                idRecomendado = 'hiit_inicial';
+                tituloRec = "HIIT - Nivel Inicial";
+                descRec = "Excelente para activar el metabolismo, ganar resistencia y quemar calorías.";
+            }
+
+            document.getElementById('recTitulo').innerText = tituloRec;
+            document.getElementById('recDesc').innerText = descRec;
+            document.getElementById('btnVerRecomendado').onclick = function() {
+                abrirModal(idRecomendado);
+            };
+
+            document.getElementById('resultadoRecomendacion').classList.remove('hidden');
+            document.getElementById('resultadoRecomendacion').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function cerrarRecomendacion() {
+            document.getElementById('resultadoRecomendacion').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
