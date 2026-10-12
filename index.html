@@ -33,14 +33,12 @@
     <!-- HEADER / BANNER DE PORTADA PRINCIPAL -->
     <header class="relative bg-black border-b border-gold/40 overflow-hidden">
         <!-- Imagen de Portada -->
-        <div class="w-full h-64 md:h-96 relative">
-            <img src="portada.jpg" alt="Claudio Baez Portada" class="w-full h-full object-cover">
-            <!-- Capa sutil de oscurecimiento para fundir los bordes -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+        <div class="w-full h-auto min-h-[250px] md:min-h-[450px] relative flex items-center justify-center bg-neutral-900">
+            <img src="Gemini_Generated_Image_66rct66rct66rct6.jpg" alt="Claudio Baez Portada" class="w-full h-auto object-contain max-h-[600px]">
         </div>
         
         <!-- Texto descriptivo debajo de la portada -->
-        <div class="max-w-4xl mx-auto px-4 pb-6 pt-2 text-center relative z-10">
+        <div class="max-w-4xl mx-auto px-4 pb-6 pt-4 text-center relative z-10 bg-black">
             <h1 class="text-2xl md:text-4xl font-black tracking-wider uppercase text-white mb-1">
                 CLAUDIO BAEZ
             </h1>
@@ -643,77 +641,4 @@
             document.getElementById('modalVistaNiveles').classList.add('hidden');
             document.getElementById('modalPaso1').classList.remove('hidden');
             document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPlan').classList.remove('hidden');
-        }
-
-        function cerrarModal() {
-            document.getElementById('modalPlan').classList.add('hidden');
-        }
-
-        function irAlCheckout() {
-            document.getElementById('modalPaso1').classList.add('hidden');
-            document.getElementById('modalPaso2').classList.remove('hidden');
-        }
-
-        function volverAlPaso1() {
-            document.getElementById('modalPaso2').classList.add('hidden');
-            document.getElementById('modalPaso1').classList.remove('hidden');
-        }
-
-        function procesarPago(e) {
-            e.preventDefault();
-            const planSeleccionado = planes[planActual];
-            
-            if (planSeleccionado && planSeleccionado.linkMp) {
-                window.location.href = planSeleccionado.linkMp;
-            } else {
-                alert('Error al procesar el enlace de pago. Por favor, intenta nuevamente.');
-            }
-        }
-
-        function recomendarPlan() {
-            const edad = parseInt(document.getElementById('qEdad').value);
-            const peso = parseFloat(document.getElementById('qPeso').value);
-            const altura = parseFloat(document.getElementById('qAltura').value);
-            const actividad = document.getElementById('qActividad').value;
-            const experiencia = document.getElementById('qExperiencia').value;
-
-            if(!edad || !peso || !altura) {
-                alert('Por favor, completa los datos de edad, peso y altura para recibir la recomendación.');
-                return;
-            }
-
-            let idRecomendado = 'hip_intermedio';
-            let tituloRec = "Hipertrofia - Nivel Intermedio";
-            let descRec = "Ideal para tu perfil para maximizar ganancia muscular y estética.";
-
-            if (experiencia === 'avanzado' && actividad === 'si') {
-                idRecomendado = 'fuerza_avanzado';
-                tituloRec = "Fuerza - Nivel Avanzado";
-                descRec = "Perfecta para romper estancamientos y potenciar tus marcas en cargas pesadas.";
-            } else if (peso > 80 && actividad === 'no') {
-                idRecomendado = 'meta_inicial';
-                tituloRec = "Metabólica - Nivel Inicial";
-                descRec = "Combinación excelente para oxidación de grasa y acondicionamiento general.";
-            } else if (experiencia === 'principiante') {
-                idRecomendado = 'hiit_inicial';
-                tituloRec = "HIIT - Nivel Inicial";
-                descRec = "Excelente para activar el metabolismo, ganar resistencia y quemar calorías.";
-            }
-
-            document.getElementById('recTitulo').innerText = tituloRec;
-            document.getElementById('recDesc').innerText = descRec;
-            document.getElementById('btnVerRecomendado').onclick = function() {
-                abrirModal(idRecomendado);
-            };
-
-            document.getElementById('resultadoRecomendacion').classList.remove('hidden');
-            document.getElementById('resultadoRecomendacion').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function cerrarRecomendacion() {
-            document.getElementById('resultadoRecomendacion').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
+            document.
