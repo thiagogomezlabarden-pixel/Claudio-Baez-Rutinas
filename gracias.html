@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu compra! - Claudio Báez Fit</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-color: #d4af37; /* Tono platino / dorado suave */
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --btn-hover: #e5c158;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            max-width: 650px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .success-icon {
+            font-size: 48px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: var(--accent-color);
+            margin: 20px 0 10px 0;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .btn-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .btn-drive {
+            background-color: #2a2a2a;
+            color: var(--text-main);
+            padding: 12px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #444;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .btn-drive:hover {
+            background-color: var(--accent-color);
+            color: #121212;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Estilo especial y cálido para el botón de regalo */
+        .btn-gift {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #221c10 0%, #2e2411 100%);
+            color: #f3e5ab;
+            font-weight: bold;
+            border: 2px dashed var(--accent-color);
+            padding: 16px;
+            font-size: 15px;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .btn-gift span {
+            font-size: 12px;
+            font-weight: normal;
+            color: #d1c290;
+        }
+
+        .btn-gift:hover {
+            background: var(--accent-color);
+            color: #121212;
+            border-style: solid;
+        }
+
+        .btn-gift:hover span {
+            color: #333;
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>¡Pago Exitoso!</h1>
+        <p>Tu pago se ha procesado correctamente. Ya tienes el acceso liberado a todo tu material de entrenamiento:</p>
+
+        <div class="section-title">Tus Programas de Entrenamiento</div>
+        <div class="btn-container">
+            <a href="https://drive.google.com/drive/folders/1K1-sxVD2swkdvERROkdG8tq29umBalTo?usp=drive_link" target="_blank" class="btn-drive">💪 Fuerza (3 rutinas)</a>
+            <a href="https://drive.google.com/drive/folders/1HJA94z9Unz44QGpstpiaAz_Of4aRPoxc?usp=drive_link" target="_blank" class="btn-drive">🔥 Hipertrofia (3 rutinas)</a>
+            <a href="https://drive.google.com/drive/folders/1YI4zZ64wtLLed3m5rYfSykko60Z657A9?usp=drive_link" target="_blank" class="btn-drive">⚡ Hit (3 rutinas)</a>
+            <a href="https://drive.google.com/drive/folders/12hsVPSxORq_zgKA3MNcraq7TBnQAM8BD?usp=drive_link" target="_blank" class="btn-drive">🔄 Metabólica (3 rutinas)</a>
+            <a href="https://drive.google.com/drive/folders/1BSAi6sWjjYCyL8aIAEScaDj7N0LZ_s5F?usp=drive_link" target="_blank" class="btn-drive">🏃 Resistencia (3 rutinas)</a>
+            
+            <!-- Botón especial de regalo -->
+            <a href="https://docs.google.com/document/d/1-lv-FHUxiVSE8rTAaeb0T91uppsG1J85/edit?usp=drive_link&ouid=110340842815949080056&rtpof=true&sd=true" target="_blank" class="btn-drive btn-gift">
+                🎁 Y de regalo, una guía de alimentación
+                <span>Para que potencies tus resultados desde el primer día</span>
+            </a>
+        </div>
+
+        <div class="footer-note">
+            <p>Te recomendamos guardar esta página o descargar los archivos. Ante cualquier consulta, comunícate con soporte.</p>
+            <p style="margin-top: 10px;"><a href="https://claudiobaezfit.com/" style="color: var(--accent-color); text-decoration: none;">Volver al sitio web principal</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
