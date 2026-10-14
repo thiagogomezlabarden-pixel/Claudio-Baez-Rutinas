@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu compra! - Claudio Báez Fit</title>
+    <style>
+        :root { --bg-color: #121212; --card-bg: #1e1e1e; --accent-color: #d4af37; --text-main: #ffffff; --text-muted: #b0b0b0; --btn-hover: #e5c158; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .container { background-color: var(--card-bg); max-width: 600px; width: 100%; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); text-align: center; border: 1px solid #333; }
+        .success-icon { font-size: 48px; color: var(--accent-color); margin-bottom: 15px; }
+        h1 { font-size: 26px; margin-bottom: 10px; color: var(--text-main); }
+        p { color: var(--text-muted); font-size: 15px; line-height: 1.5; margin-bottom: 25px; }
+        .btn-container { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+        .btn-drive { background-color: var(--accent-color); color: #121212; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; transition: background-color 0.3s ease, transform 0.2s ease; display: inline-block; }
+        .btn-drive:hover { background-color: var(--btn-hover); transform: translateY(-2px); }
+        .btn-gift { background: linear-gradient(135deg, #221c10 0%, #2e2411 100%); color: #f3e5ab; border: 2px dashed var(--accent-color); font-size: 15px; }
+        .btn-gift span { display: block; font-size: 12px; font-weight: normal; color: #d1c290; margin-top: 4px; }
+        .footer-note { margin-top: 25px; font-size: 13px; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>¡Pago Exitoso!</h1>
+        <p>Tu pago se ha procesado correctamente. Ya tienes el acceso liberado a tu programa Hit y a tu regalo exclusivo:</p>
+        <div class="btn-container">
+            <a href="https://drive.google.com/drive/folders/1YI4zZ64wtLLed3m5rYfSykko60Z657A9?usp=drive_link" target="_blank" class="btn-drive">⚡ Acceder a Programa Hit (3 rutinas)</a>
+            <a href="https://docs.google.com/document/d/1-lv-FHUxiVSE8rTAaeb0T91uppsG1J85/edit?usp=drive_link&ouid=110340842815949080056&rtpof=true&sd=true" target="_blank" class="btn-drive btn-gift">
+                🎁 Y de regalo, tu Guía de Alimentación Fitness
+                <span>Para que potencies tus resultados desde el primer día</span>
+            </a>
+        </div>
+        <div class="footer-note">
+            <p>Te recomendamos guardar esta página o descargar los archivos.</p>
+            <p style="margin-top: 10px;"><a href="https://claudiobaezfit.com/" style="color: var(--accent-color); text-decoration: none;">Volver al sitio web principal</a></p>
+        </div>
+    </div>
+</body>
+</html>
